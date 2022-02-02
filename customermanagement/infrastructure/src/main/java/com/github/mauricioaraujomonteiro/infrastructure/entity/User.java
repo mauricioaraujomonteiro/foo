@@ -7,8 +7,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.index.CompoundIndexes;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -31,8 +33,8 @@ public class User {
     private String lastName;
     @Indexed(unique = true)
     private String email;
-    @CreatedBy
+    @CreatedDate
     private LocalDateTime created;
-    @LastModifiedBy
+    @LastModifiedDate
     private LocalDateTime modified;
 }
