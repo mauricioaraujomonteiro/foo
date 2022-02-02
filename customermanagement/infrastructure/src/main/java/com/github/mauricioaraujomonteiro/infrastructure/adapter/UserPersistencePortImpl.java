@@ -6,6 +6,7 @@ import com.github.mauricioaraujomonteiro.infrastructure.entity.User;
 import com.github.mauricioaraujomonteiro.infrastructure.mapper.UserMapper;
 import com.github.mauricioaraujomonteiro.infrastructure.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
